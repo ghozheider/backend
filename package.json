@@ -1,0 +1,44 @@
+{
+  "name": "presensi-siswa",
+  "version": "1.0.0",
+  "description": "SISTEM INFORMASI PRESENSI SISWA",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "prisma generate && prisma migrate deploy && prisma db seed",
+    "postinstall": "prisma generate && prisma migrate deploy && prisma db seed"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "keywords": [
+    "webserver",
+    "rest",
+    "api",
+    "node",
+    "js",
+    "express",
+    "mysql",
+    "presensi"
+  ],
+  "author": "ghufronakbar",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^5.15.1",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "jsonwebtoken": "^9.0.2",
+    "md5": "^2.3.0",
+    "moment-timezone": "^0.5.45",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.15.1"
+  }
+}
